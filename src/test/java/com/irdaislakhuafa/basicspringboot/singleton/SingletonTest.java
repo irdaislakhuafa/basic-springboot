@@ -1,6 +1,4 @@
-package com.irdaislakhuafa.basicspringboot;
-
-import com.irdaislakhuafa.basicspringboot.singleton.SingletonExample;
+package com.irdaislakhuafa.basicspringboot.singleton;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

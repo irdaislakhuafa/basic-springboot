@@ -1,4 +1,4 @@
-package com.irdaislakhuafa.basicspringboot;
+package com.irdaislakhuafa.basicspringboot.appcliationContext;
 
 import com.irdaislakhuafa.basicspringboot.configurations.FirstConfiguration;
 
