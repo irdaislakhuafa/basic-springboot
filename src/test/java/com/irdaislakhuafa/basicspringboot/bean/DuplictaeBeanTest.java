@@ -8,9 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public class DuplictaeBeanTest {
     // test duplicate bean
     @Test
