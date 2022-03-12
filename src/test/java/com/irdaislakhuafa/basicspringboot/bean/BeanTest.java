@@ -14,13 +14,13 @@ public class BeanTest {
     public void testBean() {
         ApplicationContext context = new AnnotationConfigApplicationContext(BeansConfigurations.class);
         Assertions.assertNotNull(context);
-        ExampleData exampleData1 = context.getBean(ExampleData.class);
     }
 
     // test get bean
     @Test
     public void testGetBean() {
         ApplicationContext context = new AnnotationConfigApplicationContext(BeansConfigurations.class);
+        Assertions.assertNotNull(context);
 
         // get bean from BeansConfiguraions.class with type ExampleData
         ExampleData exampleData1 = context.getBean(ExampleData.class);
