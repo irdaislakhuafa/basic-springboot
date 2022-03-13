@@ -1,6 +1,6 @@
 package com.irdaislakhuafa.basicspringboot.bean;
 
-import com.irdaislakhuafa.basicspringboot.configurations.BeansConfigurations;
+import com.irdaislakhuafa.basicspringboot.configurations.PrimaryBeanConfigurations;
 import com.irdaislakhuafa.basicspringboot.data.ExampleData;
 
 import org.junit.jupiter.api.Assertions;
@@ -18,15 +18,16 @@ public class PrimaryBeanTest {
      */
     @BeforeEach
     public void init() {
-        context = new AnnotationConfigApplicationContext(BeansConfigurations.class);
+        context = new AnnotationConfigApplicationContext(PrimaryBeanConfigurations.class);
     }
 
     // test primary bean
     @Test
     public void testPrimaryBean() {
+
         ExampleData data = context.getBean(ExampleData.class); // this will get primary bean
-        ExampleData data1 = (ExampleData) context.getBean("exampleData1"); // get bean with name "exampleData1"
-        ExampleData data2 = context.getBean("exampleData2", ExampleData.class); // get bean "exampleData2"
+        ExampleData data1 = (ExampleData) context.getBean("data1"); // get bean with name "data1"
+        ExampleData data2 = context.getBean("data2", ExampleData.class); // get bean "data2"
 
         // is data and data1 is same? expected : true
         Assertions.assertSame(data, data1);

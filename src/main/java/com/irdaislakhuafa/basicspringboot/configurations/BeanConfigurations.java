@@ -6,9 +6,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class FirstConfiguration {
+public class BeanConfigurations {
     @Bean
-    public ExampleData exampleData() {
+    public ExampleData exampleData1() {
+        return new ExampleData();
+    }
+
+    @Bean
+    public ExampleData exampleData2() {
         return new ExampleData();
     }
 }
