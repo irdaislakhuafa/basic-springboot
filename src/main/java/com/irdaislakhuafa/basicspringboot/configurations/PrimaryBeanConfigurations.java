@@ -4,11 +4,18 @@ import com.irdaislakhuafa.basicspringboot.data.ExampleData;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
-public class FirstConfiguration {
+public class PrimaryBeanConfigurations {
+    @Primary
     @Bean
-    public ExampleData exampleData() {
+    public ExampleData data1() {
+        return new ExampleData();
+    }
+
+    @Bean
+    public ExampleData data2() {
         return new ExampleData();
     }
 }

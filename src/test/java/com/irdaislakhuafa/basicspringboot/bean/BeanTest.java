@@ -1,6 +1,6 @@
 package com.irdaislakhuafa.basicspringboot.bean;
 
-import com.irdaislakhuafa.basicspringboot.configurations.BeansConfigurations;
+import com.irdaislakhuafa.basicspringboot.configurations.FirstConfiguration;
 import com.irdaislakhuafa.basicspringboot.data.ExampleData;
 
 import org.junit.jupiter.api.Assertions;
@@ -12,14 +12,14 @@ public class BeanTest {
     // test bean
     @Test
     public void testBean() {
-        ApplicationContext context = new AnnotationConfigApplicationContext(BeansConfigurations.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(FirstConfiguration.class);
         Assertions.assertNotNull(context);
     }
 
     // test get bean
     @Test
     public void testGetBean() {
-        ApplicationContext context = new AnnotationConfigApplicationContext(BeansConfigurations.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(FirstConfiguration.class);
         Assertions.assertNotNull(context);
 
         // get bean from BeansConfiguraions.class with type ExampleData
