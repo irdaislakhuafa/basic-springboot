@@ -8,14 +8,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ManualTest {
-    // private ApplicationContext context;
-
-    // @BeforeEach
-    // public void init() {
-    // context = new
-    // AnnotationConfigApplicationContext(DependencyInjectionConfiguration.class);
-
-    // }
 
     @Test
     public void testManual() {
