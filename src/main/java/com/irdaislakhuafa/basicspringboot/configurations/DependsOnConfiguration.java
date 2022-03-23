@@ -6,6 +6,7 @@ import com.irdaislakhuafa.basicspringboot.data.Foo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.annotation.Lazy;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,6 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 public class DependsOnConfiguration {
     @Bean(name = { "thisIsBeanFoo" })
     @DependsOn(value = { "thisIsBeanBar" })
+    @Lazy
+
     public Foo foo() {
         log.info("Bean with name \"thisIsBeanFoo\" is created!");
         return new Foo();
