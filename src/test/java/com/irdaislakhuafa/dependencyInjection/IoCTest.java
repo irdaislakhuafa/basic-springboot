@@ -8,6 +8,7 @@ import com.irdaislakhuafa.basicspringboot.data.FooBar;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.opentest4j.AssertionFailedError;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -25,7 +26,9 @@ public class IoCTest {
         Bar bar = context.getBean(Bar.class);
         FooBar fooBar = context.getBean(FooBar.class);
 
-        Assertions.assertEquals(foo, fooBar.getFoo());
-        Assertions.assertSame(bar, fooBar.getBar());
+        Assertions.assertThrows(AssertionFailedError.class, () -> {
+            Assertions.assertSame(foo, fooBar.getFoo());
+            Assertions.assertSame(bar, fooBar.getBar());
+        });
     }
 }
